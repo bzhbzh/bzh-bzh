@@ -1,0 +1,25 @@
+{
+  "name": "bzh-bzh",
+  "version": "1.0.0",
+  "description": "bzh-bzh.by project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rizomaa/bzh-bzh.git"
+  },
+  "author": "rizomaa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rizomaa/bzh-bzh/issues"
+  },
+  "homepage": "https://bzh-bzh.by",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.1",
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.1"
+  }
+}
