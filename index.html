@@ -21,7 +21,7 @@
       <div class="container">
 
         <a class="navbar-brand" href="#">
-          <img src="http://placehold.it/150x50?text=Logo" alt="">
+          <img src="https://placehold.it/150x50?text=Logo" alt="">
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -214,7 +214,7 @@
               </div>
               <div class="col-lg-6 mb-4">
                 <div class="card h-100">
-                  <!-- <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a> -->
+                  <!-- <a href="#"><img class="card-img-top" src="https://placehold.it/700x400" alt=""></a> -->
                   <div class="card-body">
                     <h4 class="card-title">
                       Навіны
@@ -549,7 +549,7 @@
           </div>
           <div class="col-md-4 text-right py-3">
             <a class="navbar-brand" href="#">
-              <img src="http://placehold.it/150x50?text=Logo" alt="">
+              <img src="https://placehold.it/150x50?text=Logo" alt="">
             </a>
           </div>
         </div>
@@ -573,22 +573,30 @@
           emailjs.init("user_QJhPiLAIX8ulnpEuUZXlW");
        })();
 
-               // code fragment
-        var data = {
-            service_id: 'gmail',
-            template_id: 'basic',
-            user_id: 'user_QJhPiLAIX8ulnpEuUZXlW',          
-        };
 
-        $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
-            type: 'POST',
-            data: JSON.stringify(data),
-            contentType: 'application/json'
-        }).done(function() {
-            alert('Your mail is sent!');
-        }).fail(function(error) {
-            alert('Oops... ' + JSON.stringify(error));
-        });
+       window.onload=function(){
+           var mb = document.getElementById("sendMessageButton2");
+           mb.addEventListener("click", () => {
+             var data = {
+                 service_id: 'gmail',
+                 template_id: 'basic',
+                 user_id: 'user_QJhPiLAIX8ulnpEuUZXlW',
+             };
+
+             $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+                 type: 'POST',
+                 data: JSON.stringify(data),
+                 contentType: 'application/json'
+             }).done(function() {
+                 alert('Your mail is sent!');
+             }).fail(function(error) {
+                 alert('Oops... ' + JSON.stringify(error));
+             });
+           }));
+
+       }
+               // code fragment
+
         // code fragment
     </script>
 
