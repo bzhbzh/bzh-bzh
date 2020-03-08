@@ -439,21 +439,27 @@
           <!--Section Contacts-->
           <script>
 
-            document.getElementById("sendMessageButton").addEventListener("click", function(event){
-                event.preventDefault();
+            window.onload=function(){
+                var mb = document.getElementById("sendMessageButton2");
+                mb.addEventListener("click", handler);
 
-                Email.send({
-                  	    SecureToken : "573e9336-dfad-4e64-9a1d-0b51d7a9c07b",
-                  	    To : 'fannrm@gmail.com',
-                  	    From : "test@test.com",
-                  	    Subject : "This is the subject!!!!",
-                  	    Body : "And this is the body"
-                  	}).then(
-                  	  message => alert(message)
-                  	);
-                }
+            }
 
-            });
+            function handler () {
+              //event.preventDefault();
+              alert("test");
+              Email.send({
+                  SecureToken : "573e9336-dfad-4e64-9a1d-0b51d7a9c07b",
+                  To : 'fannrm@gmail.com',
+                  From : "test@test.com",
+                  Subject : "This is the subject!!!!",
+                  Body : "And this is the body"
+              }).then(
+                message => alert(message)
+              );
+
+            }
+
 
           </script>
           <section class="page-section bg-light mb-2" id="contacts">
@@ -461,7 +467,8 @@
               <div class="row">
                 <div class="col-lg-12 text-center my-4">
                   <h2 class="section-heading">Звязацца з намі</h2>
-                  <h3 class="lead">Калі ласка уважлівае запаўняйце ўсе палі</h3>
+                  <h3 class="lead">Калі ласка уважлівае запаўняйце ўсе палі <a href="#" id="sendMessageButton2">Адправіць паведамленне</a></h3>
+
                 </div>
               </div>
               <div class="row">
@@ -491,7 +498,7 @@
                       <div class="clearfix"></div>
                       <div class="col-lg-12 text-center mb-5">
                         <div id="success"></div>
-                        <button id="sendMessageButton" onclick="sender()" class="btn btn-success btn-lg" type="submit">Адправіць паведамленне</button>
+                        <button id="sendMessageButton" class="btn btn-success btn-lg" type="submit">Адправіць паведамленне</button>
                       </div>
                     </div>
                   </form>
