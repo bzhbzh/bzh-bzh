@@ -437,6 +437,25 @@
 
 
           <!--Section Contacts-->
+          <script>
+
+            document.getElementById("sendMessageButton").addEventListener("click", function(event){
+                event.preventDefault();
+
+                Email.send({
+                  	    SecureToken : "573e9336-dfad-4e64-9a1d-0b51d7a9c07b",
+                  	    To : 'fannrm@gmail.com',
+                  	    From : "test@test.com",
+                  	    Subject : "This is the subject!!!!",
+                  	    Body : "And this is the body"
+                  	}).then(
+                  	  message => alert(message)
+                  	);
+                }
+
+            });
+
+          </script>
           <section class="page-section bg-light mb-2" id="contacts">
             <div class="container">
               <div class="row">
@@ -472,7 +491,7 @@
                       <div class="clearfix"></div>
                       <div class="col-lg-12 text-center mb-5">
                         <div id="success"></div>
-                        <button id="sendMessageButton" class="btn btn-success btn-lg" type="submit">Адправіць паведамленне</button>
+                        <button id="sendMessageButton" onclick="sender()" class="btn btn-success btn-lg" type="submit">Адправіць паведамленне</button>
                       </div>
                     </div>
                   </form>
@@ -532,15 +551,15 @@
 
 
     <script src="./node_modules/jquery/dist/jquery.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js">
-
+    <script src="https://code.jquery.com/ui/1.8.5/jquery-ui.min.js" integrity="sha256-fOse6WapxTrUSJOJICXXYwHRJOPa6C1OUQXi7C9Ddy8=" crossorigin="anonymous"></script>
     <script src="./node_modules/popper.js/dist/popper.min.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="./node_modules/bootstrap/js/dist/util.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/validator.js"></script>
-    <script src="js/sendmail.js"></script>
+    <script src="js/sendmail__________.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
   </body>
 </html>
