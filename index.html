@@ -565,8 +565,32 @@
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/validator.js"></script>
-    <script src="js/sendmail__________.js"></script>
+    <script src="js/sendmail.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("user_QJhPiLAIX8ulnpEuUZXlW");
+       })();
+
+               // code fragment
+        var data = {
+            service_id: 'gmail',
+            template_id: 'basic',
+            user_id: 'user_QJhPiLAIX8ulnpEuUZXlW',          
+        };
+
+        $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+            type: 'POST',
+            data: JSON.stringify(data),
+            contentType: 'application/json'
+        }).done(function() {
+            alert('Your mail is sent!');
+        }).fail(function(error) {
+            alert('Oops... ' + JSON.stringify(error));
+        });
+        // code fragment
+    </script>
 
   </body>
 </html>
