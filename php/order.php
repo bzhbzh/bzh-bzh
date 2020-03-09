@@ -1,10 +1,10 @@
 <?php
 // Check for empty fields
-if(empty($_POST['name2'])      ||
-   empty($_POST['email2'])     ||
-   empty($_POST['phone2'])     ||
-   empty($_POST['message2'])   ||
-   !filter_var($_POST['email2'],FILTER_VALIDATE_EMAIL))
+if(empty($_POST['name'])      ||
+   empty($_POST['email'])     ||
+   empty($_POST['phone'])     ||
+   empty($_POST['message'])   ||
+   !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
    {
      echo "Не запоўнены ўсе палі";
      return false;
