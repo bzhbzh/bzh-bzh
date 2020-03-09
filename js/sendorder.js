@@ -31,23 +31,23 @@ $(function() {
         cache: false,
         success: function() {
           // Success message
-          $('#success').html("<div class='alert alert-success'>");
-          $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+          $('#ordering').html("<div class='alert alert-success'>");
+          $('#ordering > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
             .append("</button>");
-          $('#success > .alert-success')
+          $('#ordering > .alert-success')
             .append("<strong>Ваша замова адпраўлена. У бліжэйшы час з вамізвяжацца пчаляр, каб удакладніць дэталі.</strong>");
-          $('#success > .alert-success')
+          $('#ordering > .alert-success')
             .append('</div>');
           //clear all fields
           $('#contactForm2').trigger("reset");
         },
         error: function() {
           // Fail message
-          $('#success').html("<div class='alert alert-danger'>");
-          $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+          $('#ordering').html("<div class='alert alert-danger'>");
+          $('#ordering > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
             .append("</button>");
-          $('#success > .alert-danger').append($("<strong>").text("Выбачайце " + firstName + ", нешта пайшло не так на маім паштовым сэрверы. Калі ласка паспрабуйце трохі пазней!"));
-          $('#success > .alert-danger').append('</div>');
+          $('#ordering > .alert-danger').append($("<strong>").text("Выбачайце " + firstName + ", нешта пайшло не так на маім паштовым сэрверы. Калі ласка паспрабуйце трохі пазней!"));
+          $('#ordering > .alert-danger').append('</div>');
           //clear all fields
           $('#contactForm2').trigger("reset");
         },
