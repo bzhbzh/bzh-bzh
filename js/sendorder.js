@@ -1,6 +1,6 @@
 $(function() {
 
-  $("#contactForm2 input,#contactForm2 textarea").jqBootstrapValidation({
+  $("#orderForm input,#orderForm textarea").jqBootstrapValidation({
     preventSubmit: true,
     submitError: function($form, event, errors) {
       // additional error messages or events
@@ -17,7 +17,7 @@ $(function() {
       if (firstName.indexOf(' ') >= 0) {
         firstName = name.split(' ').slice(0, -1).join(' ');
       }
-      $this = $("#sendMessageButton2");
+      $this = $("#sendOrderButton");
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
       $.ajax({
         url: "./../php/order.php",
@@ -35,11 +35,11 @@ $(function() {
           $('#ordering > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
             .append("</button>");
           $('#ordering > .alert-success')
-            .append("<strong>Ваша замова адпраўлена. У бліжэйшы час з вамізвяжацца пчаляр, каб удакладніць дэталі.</strong>");
+            .append("<strong>Ваша замова адпраўлена. У бліжэйшы час з вамі звяжацца пчаляр, каб удакладніць дэталі.</strong>");
           $('#ordering > .alert-success')
             .append('</div>');
           //clear all fields
-          $('#contactForm2').trigger("reset");
+          $('#orderForm').trigger("reset");
         },
         error: function() {
           // Fail message
@@ -49,7 +49,7 @@ $(function() {
           $('#ordering > .alert-danger').append($("<strong>").text("Выбачайце " + firstName + ", нешта пайшло не так на маім паштовым сэрверы. Калі ласка паспрабуйце трохі пазней!"));
           $('#ordering > .alert-danger').append('</div>');
           //clear all fields
-          $('#contactForm2').trigger("reset");
+          $('#orderForm').trigger("reset");
         },
         complete: function() {
           setTimeout(function() {
