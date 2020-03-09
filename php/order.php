@@ -23,7 +23,7 @@ $email_body = "\r\n"."Дэталі:\r\nІмя: $name\r\nІмэйл: $email_addre
 
 $headers = "From: $email_address\r\n";
 $headers.= "MIME-Version: 1.0\r\n";
-$headers.= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+$headers.= "Content-Type: text/html; charset=utf-8\r\n";
 $headers.= "X-Priority: 1\r\n";
 
 //$headers = "From: noreply@yourdomain.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
