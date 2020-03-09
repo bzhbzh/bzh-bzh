@@ -436,38 +436,12 @@
           </section>
 
 
-          <!--Section Contacts-->
-          <script>
-
-            window.onload=function(){
-                var mb = document.getElementById("sendMessageButton2");
-                mb.addEventListener("click", handler);
-
-            }
-
-            function handler () {
-              //event.preventDefault();
-              alert("test");
-              Email.send({
-                  SecureToken : "573e9336-dfad-4e64-9a1d-0b51d7a9c07b",
-                  To : 'fannrm@gmail.com',
-                  From : "test@test.com",
-                  Subject : "This is the subject!!!!",
-                  Body : "And this is the body"
-              }).then(
-                message => alert(message)
-              );
-
-            }
-
-
-          </script>
           <section class="page-section bg-light mb-2" id="contacts">
             <div class="container">
               <div class="row">
                 <div class="col-lg-12 text-center my-4">
                   <h2 class="section-heading">Звязацца з намі</h2>
-                  <h3 class="lead">Калі ласка уважлівае запаўняйце ўсе палі <a href="#" id="sendMessageButton2">Адправіць паведамленне</a></h3>
+                  <h3 class="lead">Калі ласка уважлівае запаўняйце ўсе палі</h3>
 
                 </div>
               </div>
@@ -566,39 +540,6 @@
     <script src="js/custom.js"></script>
     <script src="js/validator.js"></script>
     <script src="js/sendmail.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-    <script type="text/javascript">
-       (function(){
-          emailjs.init("user_QJhPiLAIX8ulnpEuUZXlW");
-       })();
-
-
-       window.onload=function(){
-           var mb = document.getElementById("sendMessageButton2");
-           mb.addEventListener("click", () => {
-             var data = {
-                 service_id: 'gmail',
-                 template_id: 'basic',
-                 user_id: 'user_QJhPiLAIX8ulnpEuUZXlW',
-             };
-
-             $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
-                 type: 'POST',
-                 data: JSON.stringify(data),
-                 contentType: 'application/json'
-             }).done(function() {
-                 alert('Your mail is sent!');
-             }).fail(function(error) {
-                 alert('Oops... ' + JSON.stringify(error));
-             });
-           }));
-
-       }
-               // code fragment
-
-        // code fragment
-    </script>
 
   </body>
 </html>
