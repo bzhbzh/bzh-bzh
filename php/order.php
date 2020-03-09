@@ -6,7 +6,7 @@ if(empty($_POST['name2'])      ||
    empty($_POST['message2'])   ||
    !filter_var($_POST['email2'],FILTER_VALIDATE_EMAIL))
    {
-     echo "Не запоўнены ўсе палі";
+     echo "Не запоўнены ўсе палі. $_POST['name2'], $_POST['email2'], $_POST['phone2'], $_POST['message2']";
      return false;
    }
 
