@@ -8,10 +8,10 @@ $(function() {
     submitSuccess: function($form, event) {
       event.preventDefault(); // prevent default submit behaviour
       // get values from FORM
-      var name = $("input#name").val();
-      var email = $("input#email").val();
-      var phone = $("input#phone").val();
-      var message = $("textarea#message").val();
+      var name = $("input#name2").val();
+      var email = $("input#email2").val();
+      var phone = $("input#phone2").val();
+      var message = $("textarea#message2").val();
       var firstName = name; // For Success/Failure Message
       // Check for white space in name for Success/Fail message
       if (firstName.indexOf(' ') >= 0) {
@@ -39,7 +39,7 @@ $(function() {
           $('#success > .alert-success')
             .append('</div>');
           //clear all fields
-          $('#contactForm').trigger("reset");
+          $('#contactForm2').trigger("reset");
         },
         error: function() {
           // Fail message
@@ -49,7 +49,7 @@ $(function() {
           $('#success > .alert-danger').append($("<strong>").text("Выбачайце " + firstName + ", нешта пайшло не так на маім паштовым сэрверы. Калі ласка паспрабуйце трохі пазней!"));
           $('#success > .alert-danger').append('</div>');
           //clear all fields
-          $('#contactForm').trigger("reset");
+          $('#contactForm2').trigger("reset");
         },
         complete: function() {
           setTimeout(function() {
