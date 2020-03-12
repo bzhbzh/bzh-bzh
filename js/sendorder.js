@@ -39,7 +39,8 @@ $(function() {
           $('#ordering > .alert-success')
             .append('</div>');
           //clear all fields
-          $('#orderForm').trigger("reset");
+          $('#orderForm input,#orderForm textarea').hide('slow');
+          $('#sendOrderButton ').hide('slow');
         },
         error: function() {
           // Fail message
@@ -48,8 +49,6 @@ $(function() {
             .append("</button>");
           $('#ordering > .alert-danger').append($("<strong>").text("Выбачайце " + firstName + ", нешта пайшло не так на маім паштовым сэрверы. Калі ласка паспрабуйце трохі пазней!"));
           $('#ordering > .alert-danger').append('</div>');
-          //clear all fields
-          $('#orderForm').trigger("reset");
         },
         complete: function() {
           setTimeout(function() {
