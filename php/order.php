@@ -16,7 +16,7 @@ $phone = strip_tags(htmlspecialchars($_POST['phone']));
 $message = strip_tags(htmlspecialchars($_POST['message']));
 
 // Create the email and send the message
-$to = 'team@falanster.by'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
+$to = 'contact@bzh-bzh.by'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
 $email_subject = "Замова з BZH-BZH.BY ад $name";
 $email_body = "\r\n"."Дэталі:\r\nІмя: $name\r\nІмэйл: $email_address\r\nТэлефон: $phone\r\nЗмест:\r\n$message";
 
