@@ -47,7 +47,7 @@ $(function() {
           $('#ordering').html("<div class='alert alert-danger'>");
           $('#ordering > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
             .append("</button>");
-          $('#ordering > .alert-danger').append($("<strong>").text("Выбачайце " + firstName + ", нешта пайшло не так на маім паштовым сэрверы. Калі ласка паспрабуйце трохі пазней!"));
+          $('#ordering > .alert-danger').append($("<strong>").text("Выбачайце " + firstName + ", нешта пайшло не так на маім паштовым сэрверы. Калі ласка напішыце нам у сацсеткі або паспрабуйце трохі пазней!"));
           $('#ordering > .alert-danger').append('</div>');
         },
         complete: function() {
